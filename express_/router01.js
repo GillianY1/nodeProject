@@ -11,9 +11,8 @@ const login = function (req, res, next) {
   }
 }
 
-//add images
+//add path to images folder 
 app.use(express.static('public'))
-
 
 // apply middleware to all steps
 //app.use(login)

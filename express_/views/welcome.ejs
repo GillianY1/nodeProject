@@ -1,0 +1,16 @@
+<% layout('layout') %>
+
+    <%- code %>
+    hello ~
+    Here is :<%= title %>  <br>
+    I am the boss: <%= boss %>
+    <br>
+
+    <h4>your choices:</h4>
+    <ul> 
+    <% 
+    let colorlist= ['red','blue','yellow']
+    for(let color of colorlist){ %>
+        <li> <%= color %> </li>
+    <% } %>
+    </ul>

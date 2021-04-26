@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Kitty</title>
+</head>
+<body>
+    <%- code %>
+    hello ~
+    Here is :<%= title %>  <br>
+    I am the boss: <%= boss %>
+    <br>
+
+    <h4>your choices:</h4>
+    <ul> 
+    <% 
+    let colorlist= ['red','blue','yellow']
+    for(let color of colorlist){ %>
+        <li> <%= color %> </li>
+    <% } %>
+    </ul>
+    
+</body>
+</html>
