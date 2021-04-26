@@ -11,12 +11,16 @@ const login = function (req, res, next) {
   }
 }
 
+//add images
+app.use(express.static('public'))
+
+
 // apply middleware to all steps
 //app.use(login)
 
 // add middleware login after the path /
 app.get('/',login, function (req, res, next) {
-  res.send('welcome to my world')
+  res.send('<html><head></head><body><img src="/images/cat2.jpg"></body></html>')
   next() // go to next follow
 })
 
