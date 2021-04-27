@@ -31,7 +31,6 @@ app.get('/user', function (req, res, next) {
   })
 })
 
-
 /*
 app.use(function (req, res, next) {
   res.status(404).send('抱歉這網頁不存在')
