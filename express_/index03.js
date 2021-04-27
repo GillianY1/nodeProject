@@ -9,7 +9,7 @@ app.use(express.static('public')) // add static path
 
 const bodyparser = require('body-parser')
 app.use(bodyparser.json())
-app.use(bodyparser.urlencoded({ extend: false }))
+app.use(bodyparser.urlencoded({ extend: false })) // 可以支援傳統表單格式
 
 app.get('/', (req, res, next) => {
   // res.send('test')
@@ -26,8 +26,12 @@ app.post('/searchList', (req,res)=>{
 })
 
 app.post('/searchAJAX', (req,res)=>{
+  console.log(req.body)
+  console.log(req.body.list[2])
   res.send(' hello world')
-  //res.redirect('search') 
+  // using all.js , to submit the form to searchAJAX 
+  // will see on client console : hello world
+
 })
 
 const port = process.env.PORT || 3000
