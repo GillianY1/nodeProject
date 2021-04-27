@@ -21,8 +21,13 @@ app.get('/search', (req, res) => {
   res.render('search')
 })
 app.post('/searchList', (req,res)=>{
-  console.log(req.body)  // will show the input name:value
+  console.log(req.body)  // will show the input name:value , req.body.name ...
   res.redirect('search') // 轉址回到search, 不然如果是 res.render('/search') 網址列會還是searchList
+})
+
+app.post('/searchAJAX', (req,res)=>{
+  res.send(' hello world')
+  //res.redirect('search') 
 })
 
 const port = process.env.PORT || 3000
