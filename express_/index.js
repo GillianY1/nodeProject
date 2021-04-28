@@ -4,11 +4,9 @@ let app = express()
 
 //middle ware
 let login = function(req,res,next){
-
 }
 
 app.get('/',login,function(req,res){
-
 })
 
 app.get('/profile/:name/:serial',function(req,res,next)){

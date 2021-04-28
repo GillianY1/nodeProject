@@ -15,6 +15,6 @@ send.addEventListener('click', (e) => {
   const data = JSON.stringify({ "content" : str , "list" : ['apple', 'banana', 'cake','crep' ] })
   xhr.send(data)
   xhr.onload = () => {
-    console.log(xhr.responseText) // get the response , will get the response from search.ejs:  hello world on client console
+    console.log(xhr.responseText) // get the response , will get the response from /searchAJAX:  hello world on client console
   }
 })
